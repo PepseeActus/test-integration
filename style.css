@@ -1,0 +1,263 @@
+/*Variable*/
+:root {
+    --main-background-color: #253261;
+    --main-primary-color: #1B254E;
+    --main-secondary-color: #10183B;
+    --sidebar-background-color: #1E2A52;
+    --backgound-color: #121A3E;
+    --light-blue: #BADEFF;
+    --line-color: #545B7A;
+    --border-color: #2E86FF;
+}
+
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--backgound-color);
+    color: white;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1112px;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.box {
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.box:not(:last-of-type) {
+    margin-bottom: 30px;
+}
+
+/*Main*/
+.main {
+    width: 69%;
+}
+
+.main .box {
+    background: var(--main-background-color);
+}
+
+.content-header h2 svg {
+    margin-right: 10px;
+}
+
+.dashboard .content-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.dashboard .content-header > div {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard .content-header span {
+    margin: 0 5px;
+    color: var(--light-blue);
+}
+
+.dashboard .content-header .border {
+    padding: 10px 30px;
+    margin-left: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 40px;
+}
+
+.dashboard .content-header h2 {
+    display: flex;
+    align-items: center;
+    letter-spacing: .5px;
+}
+
+.dashboard .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard .content-wrapper {
+    width: 30%;
+}
+
+.dashboard .content-wrapper h3 {
+    margin-right: 30px;
+    margin-bottom: 10px;
+    color: var(--light-blue);
+    text-align: right;
+}
+
+.dashboard .content-box {
+    padding: 15px 30px;
+    background: var(--main-primary-color);
+    border-radius: 10px;
+    color: var(--line-color);
+    text-align: right;
+}
+
+.staking {
+    display: flex;
+    justify-content: space-between;
+}
+
+.staking .content-header {
+    margin-bottom: 40px;
+}
+
+.staking .content-header h2 {
+    display: flex;
+    align-items: center;
+}
+
+.staking .content-wrapper {
+    width: 49%;
+    border-radius: 10px;
+}
+
+.staking .content-wrapper h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: var(--light-blue);
+}
+
+.staking .content-wrapper h3 svg {
+    margin-right: 10px;
+}
+
+.staking .content-wrapper + .content-wrapper {
+    padding: 20px 30px;
+    background: var(--main-secondary-color);
+}
+
+.staking .content-wrapper + .content-wrapper div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.staking .content-wrapper + .content-wrapper div:not(:last-of-type) {
+    margin-bottom: 40px;
+}
+
+.staking .content-box {
+    display: flex;
+    padding: 20px 0;
+    border-radius: 10px;
+    background: var(--main-secondary-color);
+}
+
+.staking .content-box div {
+    width: 50%;
+    padding: 20px;
+    text-align: right;
+}
+
+.staking .content-box div + div {
+    text-align: left;
+    border-left: 1px solid var(--line-color);
+}
+
+.staking .content-box:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+/*Sidebar*/
+.sidebar {
+    width: 29%;
+}
+
+.sidebar .box {
+    background: var(--sidebar-background-color);
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 60px;
+    color: white;
+    background: linear-gradient(90deg, rgba(86,193,240,1) 0%, rgba(71,51,192,1) 100%);
+}
+
+.sidebar button + button {
+    margin-top: 25px;
+    background: linear-gradient(90deg, rgba(71,51,192,1) 0%, rgba(86,193,240,1) 100%);
+}
+
+.sidebar .content-header {
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--line-color);
+    color: var(--light-blue);
+    text-align: center;
+}
+
+.sidebar .contact .content-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sidebar .contact .content-box div {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    min-width: 50%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar .contact .content-box svg,
+.sidebar .contact .content-box img {
+    width: 30px;
+    margin-right: 30px;
+}
+
+.sidebar .faq .content-header h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar .faq .content-header svg {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.sidebar .faq .content-box {
+    text-align: center;
+}
+
+.sidebar .faq .continue {
+    text-align: right;
+}
