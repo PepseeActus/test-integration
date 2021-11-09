@@ -41,9 +41,9 @@ body {
 .wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 15px;
     margin: 0 auto;
-    max-width: 1112px;
+    max-width: 1365px;
 }
 
 h2 {
@@ -61,7 +61,9 @@ h2 {
 
 /*Main*/
 .main {
-    width: 69%;
+    max-width: 890px;
+    width: 70%;
+    padding: 0 15px;
 }
 
 .main .box {
@@ -91,6 +93,7 @@ h2 {
 .dashboard .content-header .border {
     padding: 10px 30px;
     margin-left: 10px;
+    font-size: 18px;
     border: 2px solid var(--border-color);
     border-radius: 40px;
 }
@@ -99,6 +102,7 @@ h2 {
     display: flex;
     align-items: center;
     letter-spacing: .5px;
+    font-size: 22px;
 }
 
 .dashboard .content {
@@ -137,11 +141,16 @@ h2 {
 .staking .content-header h2 {
     display: flex;
     align-items: center;
+    font-size: 22px;
 }
 
 .staking .content-wrapper {
-    width: 49%;
+    width: 37%;
     border-radius: 10px;
+}
+
+.staking .content-wrapper + .content-wrapper {
+    width: 60%;
 }
 
 .staking .content-wrapper h3 {
@@ -162,8 +171,20 @@ h2 {
 }
 
 .staking .content-wrapper + .content-wrapper div {
+    position: relative;
     display: flex;
     justify-content: space-between;
+}
+
+.staking .content-wrapper + .content-wrapper div::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    content: '';
+    display: block;
+    width: 100px;
+    border-bottom: 1px solid var(--line-color);
 }
 
 .staking .content-wrapper + .content-wrapper div:not(:last-of-type) {
@@ -194,7 +215,9 @@ h2 {
 
 /*Sidebar*/
 .sidebar {
-    width: 29%;
+    max-width: 390px;
+    width: 30%;
+    padding: 0 15px;
 }
 
 .sidebar .box {
@@ -220,6 +243,7 @@ h2 {
     border-bottom: 1px solid var(--line-color);
     color: var(--light-blue);
     text-align: center;
+    font-size: 18px;
 }
 
 .sidebar .contact .content-box {
@@ -231,8 +255,7 @@ h2 {
 .sidebar .contact .content-box div {
     display: flex;
     align-items: center;
-    width: 50%;
-    min-width: 50%;
+    min-width: 40%;
     margin-bottom: 20px;
     text-align: center;
 }
